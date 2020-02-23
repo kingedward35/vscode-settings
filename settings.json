@@ -1,15 +1,42 @@
 // Place your settings in this file to overwrite the default settings
 {
   "editor.tabSize": 2,
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "FiraCode Nerd Font",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "edge": "html"
   },
+  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+  "vim.leader": ",",
+  "vim.surround": true,
+  "vim.vimrc.enable": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "n", "t"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleSidebarVisibility",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ], // "vim.vimrc.path": "",
   "javascript.validate.enable": false,
   "editor.formatOnSave": true,
+  "languageServerHaskell.completionSnippetsOn": true,
+  // "languageServerHaskell.hlintOn": true,
+  "languageServerHaskell.enableHIE": true,
+  "languageServerHaskell.showTypeForSelection.command.location": "dropdown",
+  "languageServerHaskell.maxNumberOfProblems": 100,
   // "window.reopenFolders": "all",
   "window.restoreWindows": "all",
   "window.restoreFullscreen": true,
@@ -47,9 +74,10 @@
   // "tslint.jsEnable": true,
   // "tslint.run": "onSave",
   "editor.cursorBlinking": "solid",
+  "npm.enableScriptExplorer": true,
   "atomKeymap.promptV3Features": true,
   // "editor.formatOnPaste": false,
-  // "haskell.hlint.executablePath": "hlint",
+  // "haskell.hlint.executablePath": "~/.local/bin/hlint",
   // "haskelly.codeCompletion": true,
   // "haskelly.buttons.ghci": true,
   // "haskelly.buttons.runfile": true,
@@ -89,6 +117,7 @@
   "haskutil.alignImports": true,
   "haskutil.sortImports": true,
   "haskutil.organiseExtensionOnSave": true,
+  "haskell.indentationRules.enabled": true,
   "haskell.hlint.run": "onType",
   "hindent-format.enable": true,
   "hindent-format.command": "hindent",
@@ -106,10 +135,14 @@
   ],
   "editor.minimap.enabled": false,
   "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontSize": 15,
+  // "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "workbench.startupEditor": "none",
   "purescript.buildCommand": "npm run build:json",
+  "purescript.autocompleteAddImport": true,
+  "purescript.editorMode": true,
+  "purescript.pscIdePort": null,
   "purescript.fastRebuild": true,
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
@@ -118,7 +151,7 @@
   "gitlens.views.fileHistory.enabled": true,
   "bracketPairColorizer.forceUniqueOpeningColor": true,
   "bracketPairColorizer.colorMode": "Consecutive",
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": false,
   "files.associations": {
     "*.html": "html"
   },
@@ -158,14 +191,15 @@
     "editorLineNumber.foreground": "#d3d3d3",
     "editorGroupHeader.tabsBackground": "#000000"
   },
-  "prettier.eslintIntegration": true,
+  // "standard.enable": true,
   "eslint.enable": true,
-  "eslint.packageManager": "yarn",
+  "eslint.packageManager": "npm",
+  // "eslint.options": { "configfile": "~/Desktop/todo-vanilla-js/.eslintrc.json" },
   "git.ignoreMissingGitWarning": true,
   "files.eol": "\r\n",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.iconTheme": "simple-icons",
-  "workbench.colorTheme": "One Dark Pro Vivid",
+  "workbench.iconTheme": "file-icons",
+  "workbench.colorTheme": "Darker than One Dark Pro",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -236,11 +270,15 @@
   "[haskell]": {
     "editor.defaultFormatter": "monofon.hindent-format"
   },
-  "terminal.integrated.shell.osx": "/bin/bash",
+  "terminal.integrated.shell.osx": "/bin/zsh",
   "elm.analyseEnabled": true,
   "elm.includeParamsInUserAutocomplete": true,
   "elm.includeUserFunctionDocumentation": true,
-  "calva.paredit.defaultKeyMap": "original"
+  "calva.paredit.defaultKeyMap": "original",
+  "material-icon-theme.activeIconPack": "react",
+  "explorer.openEditors.visible": 0,
+  "workbench.settings.editor": "json",
+  "javascript.implicitProjectConfig.checkJs": true
   //     "[html]": {
   //   }
   // "clojure.leinPath": "/usr/local/bin/lein",
