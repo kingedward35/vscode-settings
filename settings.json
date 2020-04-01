@@ -12,15 +12,47 @@
   "vim.leader": ",",
   "vim.surround": true,
   "vim.vimrc.enable": true,
-  "vim.normalModeKeyBindings": [
+ "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "n", "t"],
       "after": [],
       "commands": [
         {
-          "command": "workbench.action.toggleSidebarVisibility",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "m"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen",
           "args": []
         }
+      ]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "after": [],
+      "commands": [
+        { // |←
+          "when": "!sideBarFocus",
+          "command": "workbench.action.focusSideBar",
+          "args": []
+        },
+        // { // |→
+        //   "when": "sideBarFocus",
+        //   "command": "workbench.action.focusActiveEditorGroup",
+        //   "args": []
+        // }
+      ]
+    },
+    {
+      "before": [":"],
+      "commands": [
+          "workbench.action.showCommands",
       ]
     }
   ],
