@@ -41,12 +41,7 @@
           "when": "!sideBarFocus",
           "command": "workbench.action.focusSideBar",
           "args": []
-        },
-        // { // |→
-        //   "when": "sideBarFocus",
-        //   "command": "workbench.action.focusActiveEditorGroup",
-        //   "args": []
-        // }
+        }
       ]
     },
     {
