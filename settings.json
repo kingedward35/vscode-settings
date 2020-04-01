@@ -2,17 +2,22 @@
 {
   "editor.tabSize": 2,
   "editor.fontSize": 16,
+  "editor.lineNumbers": "relative",
   "editor.fontLigatures": true,
   "editor.fontFamily": "FiraCode Nerd Font",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "edge": "html"
   },
-  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.showcmd": true ,
+  "vim.enableNeovim":true,
+  "vim.useSystemClipboard": true,
+  "vim.changeWordIncludesWhitespace": true,
   "vim.leader": ",",
   "vim.surround": true,
   "vim.vimrc.enable": true,
- "vim.normalModeKeyBindings": [
+  "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "n", "t"],
       "after": [],
@@ -42,12 +47,6 @@
           "command": "workbench.action.focusSideBar",
           "args": []
         }
-      ]
-    },
-    {
-      "before": [":"],
-      "commands": [
-          "workbench.action.showCommands",
       ]
     }
   ],
