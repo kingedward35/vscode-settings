@@ -2,13 +2,30 @@
 {
   "editor.tabSize": 2,
   "editor.fontSize": 16,
+  "editor.lineNumbers": "relative",
   "editor.fontLigatures": true,
   "editor.fontFamily": "FiraCode Nerd Font",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "edge": "html"
   },
-  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#98fb98", "#000"],
+  "vim.statusBarColors.insert": ["#BF616A", "#000"],
+  "vim.statusBarColors.visual": ["#B48EAD", "#000"],
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": ["#007ACC", "#fff"],
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.showcmd": true,
+  "vim.enableNeovim": true,
+  "vim.useSystemClipboard": true,
+  "vim.changeWordIncludesWhitespace": true,
   "vim.leader": ",",
   "vim.surround": true,
   "vim.vimrc.enable": true,
@@ -19,6 +36,28 @@
       "commands": [
         {
           "command": "workbench.action.toggleSidebarVisibility",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "m"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "after": [],
+      "commands": [
+        {
+          // |←
+          "when": "!sideBarFocus",
+          "command": "workbench.action.focusSideBar",
           "args": []
         }
       ]
@@ -183,13 +222,16 @@
     "peekView.border": "#d3d3d3",
     "sideBarSectionHeader.border": "#d3d3d3",
     "menu.selectionBorder": "#d3d3d3",
-    "statusBar.border": "#d3d3d3",
     "titleBar.border": "#d3d3d3",
     "menubar.selectionBorder": "#d3d3d3",
     "terminal.border": "#d3d3d3",
     "editorGroupHeader.tabsBorder": "#d3d3d3",
     "editorLineNumber.foreground": "#d3d3d3",
-    "editorGroupHeader.tabsBackground": "#000000"
+    "editorGroupHeader.tabsBackground": "#000000",
+    "statusBar.background": "#B48EAD",
+    "statusBar.noFolderBackground": "#B48EAD",
+    "statusBar.debuggingBackground": "#B48EAD",
+    "statusBar.foreground": "#000"
   },
   // "standard.enable": true,
   "eslint.enable": true,
