@@ -1,4 +1,3 @@
-// Place your settings in this file to overwrite the default settings
 {
   "editor.tabSize": 2,
   "editor.fontSize": 16,
@@ -9,6 +8,8 @@
     "javascript": "javascriptreact",
     "edge": "html"
   },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": ["#98fb98", "#000"],
   "vim.statusBarColors.insert": ["#BF616A", "#000"],
@@ -16,26 +17,46 @@
   "vim.statusBarColors.visualline": "#B48EAD",
   "vim.statusBarColors.visualblock": "#A3BE8C",
   "vim.statusBarColors.replace": "#D08770",
-  "vim.statusBarColors.commandlineinprogress": ["#007ACC", "#fff"],
+  "vim.statusBarColors.comandlineinprogress": ["#007ACC", "#fff"],
   "vim.statusBarColors.searchinprogressmode": "#007ACC",
   "vim.statusBarColors.easymotionmode": "#007ACC",
   "vim.statusBarColors.easymotioninputmode": "#007ACC",
   "vim.statusBarColors.surroundinputmode": "#007ACC",
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.showcmd": true,
-  "vim.enableNeovim": true,
+  "vim.enableNeovim":true,
   "vim.useSystemClipboard": true,
   "vim.changeWordIncludesWhitespace": true,
   "vim.leader": ",",
   "vim.surround": true,
   "vim.vimrc.enable": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "f"],
+      "commands": [ "revealInExplorer" ]
+    },
+    {
+      "before": ["<leader>", "r", "f"],
+      "commands": [ "fileutils.renameFile" ]
+    }
+  ],
   "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "n", "t"],
       "after": [],
       "commands": [
         {
-          "command": "workbench.action.toggleSidebarVisibility",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.showCommands",
           "args": []
         }
       ]
@@ -54,8 +75,7 @@
       "before": ["<leader>", "z"],
       "after": [],
       "commands": [
-        {
-          // |←
+        { // |←
           "when": "!sideBarFocus",
           "command": "workbench.action.focusSideBar",
           "args": []
@@ -63,23 +83,23 @@
       ]
     },
     {
-      "before": ["<leader>", "m"],
+      "before": ["<leader>", "s"],
       "after": [],
       "commands": [
-        {
-          "command": "workbench.action.quickOpen",
+        { // |←
+          "when": "!sideBarFocus",
+          "command": "workbench.view.search",
           "args": []
         }
       ]
     },
     {
-      "before": ["<leader>", "z"],
-      "after": [],
+      "before": ["<leader>", "x"],
+      "afterL": [],
       "commands": [
         {
-          // |←
-          "when": "!sideBarFocus",
-          "command": "workbench.action.focusSideBar",
+          "when": "!editorTextFocus",
+          "command": "workbench.view.extensions",
           "args": []
         }
       ]
@@ -348,3 +368,4 @@
   // "clojure.leinPath": "/usr/local/bin/lein",
   // "clojure.toolsJar": "/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/lib/tools.jar"
 }
+m
