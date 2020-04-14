@@ -105,6 +105,28 @@
       ]
     }
   ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["J"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesUpAction",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["K"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesDownAction",
+          "args": []
+        }
+      ]
+    }
+  ],
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
