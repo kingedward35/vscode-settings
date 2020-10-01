@@ -3,51 +3,85 @@
   "editor.fontSize": 16,
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": true,
-  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "edge": "html"
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#98fb98", "#000"],
-  "vim.statusBarColors.insert": ["#BF616A", "#000"],
-  "vim.statusBarColors.visual": ["#B48EAD", "#000"],
-  "vim.statusBarColors.visualline": "#B48EAD",
-  "vim.statusBarColors.visualblock": "#A3BE8C",
-  "vim.statusBarColors.replace": "#D08770",
-  "vim.statusBarColors.comandlineinprogress": ["#007ACC", "#fff"],
-  "vim.statusBarColors.searchinprogressmode": "#007ACC",
-  "vim.statusBarColors.easymotionmode": "#007ACC",
-  "vim.statusBarColors.easymotioninputmode": "#007ACC",
-  "vim.statusBarColors.surroundinputmode": "#007ACC",
-  "vim.neovimPath": "/usr/local/bin/nvim",
-  "vim.showcmd": true,
-  "vim.enableNeovim":true,
-  "vim.useSystemClipboard": true,
-  "vim.changeWordIncludesWhitespace": true,
-  "vim.leader": ",",
-  "vim.surround": true,
-  "vim.vimrc.enable": true,
+  // "vim.experimentalOptimizations": false,
+  // "vim.incsearch": true,
+  // "vim.sneak": true,
+  // "vim.statusBarColorControl": true,
+  // "vim.statusBarColors.normal": [
+  //   "#98fb98",
+  //   "#000"
+  // ],
+  // "vim.statusBarColors.insert": [
+  //   "#BF616A",
+  //   "#000"
+  // ],
+  // "vim.statusBarColors.visual": [
+  //   "#B48EAD",
+  //   "#000"
+  // ],
+  // "vim.statusBarColors.visualline": [
+  //   "#B48EAD",
+  //   "#000"
+  // ],
+  // "vim.statusBarColors.visualblock": [
+  //   "#A3BE8C",
+  //   "#000"
+  // ],
+  // "vim.statusBarColors.replace": "#D08770",
+  // "vim.statusBarColors.commandlineinprogress": [
+  //   "#007ACC",
+  //   "#fff"
+  // ],
+  // "vim.statusBarColors.searchinprogressmode": [
+  //   "#007ACC",
+  //   "#fff"
+  // ],
+  // "vim.statusBarColors.easymotionmode": "#007ACC",
+  // "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  // "vim.statusBarColors.surroundinputmode": "#007ACC",
+  // "vim.neovimPath": "/usr/local/bin/nvim",
+  // "vim.showcmd": true,
+  // "vim.enableNeovim": true,
+  // "vim.useSystemClipboard": true,
+  // "vim.changeWordIncludesWhitespace": true,
+  // "vim.leader": ",",
+  // "vim.surround": true,
+  // "vim.vimrc.enable": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "f"],
-      "commands": [ "revealInExplorer" ]
+      "commands": ["revealInExplorer"]
     },
     {
       "before": ["<leader>", "r", "f"],
-      "commands": [ "fileutils.renameFile" ]
+      "commands": ["fileutils.renameFile"]
     }
   ],
   "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "h"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.showHover",
+          "args": []
+        }
+      ]
+    },
     {
       "before": ["<leader>", "n", "t"],
       "after": [],
       "commands": [
         {
-        "command": "workbench.action.toggleSidebarVisibility",
-        "args": []
+          "command": "workbench.action.toggleSidebarVisibility",
+          "args": []
         }
       ]
     },
@@ -75,7 +109,8 @@
       "before": ["<leader>", "z"],
       "after": [],
       "commands": [
-        { // |←
+        {
+          // |‚Üê/
           "when": "!sideBarFocus",
           "command": "workbench.action.focusSideBar",
           "args": []
@@ -86,10 +121,21 @@
       "before": ["<leader>", "s"],
       "after": [],
       "commands": [
-        { // |←
+        {
+          // |‚Üê
           "when": "!sideBarFocus",
           "command": "workbench.view.search",
           "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.terminal.toggleTerminal",
+          "after": []
         }
       ]
     },
@@ -103,6 +149,16 @@
           "args": []
         }
       ]
+    },
+    {
+      "before": ["<leader>", "w", "w"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        }
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -111,7 +167,7 @@
       "after": [],
       "commands": [
         {
-          "command": "editor.action.moveLinesUpAction",
+          "command": "editor.action.moveLinesDownAction",
           "args": []
         }
       ]
@@ -121,7 +177,7 @@
       "after": [],
       "commands": [
         {
-          "command": "editor.action.moveLinesDownAction",
+          "command": "editor.action.moveLinesUpAction",
           "args": []
         }
       ]
@@ -132,14 +188,18 @@
       "before": ["j", "j"],
       "after": ["<Esc>"]
     }
-  ], // "vim.vimrc.path": "",
+  ],
   "javascript.validate.enable": false,
   "editor.formatOnSave": true,
-  "languageServerHaskell.completionSnippetsOn": true,
-  // "languageServerHaskell.hlintOn": true,
-  "languageServerHaskell.enableHIE": true,
+  "haskell.enable": true,
+  // "haskell.formattingProvider": "stylish-haskell",
+  "haskell.formatOnImportOn": true,
+  "haskell.hlintOn": true,
+  "haskell.languageServerVariant": "haskell-language-server",
+  // "haskell.formattingProvider": "floskell",
+  "haskell.formattingProvider": "floskell",
+  "haskell.completionSnippetsOn": true,
   "languageServerHaskell.showTypeForSelection.command.location": "dropdown",
-  "languageServerHaskell.maxNumberOfProblems": 100,
   // "window.reopenFolders": "all",
   "window.restoreWindows": "all",
   "window.restoreFullscreen": true,
@@ -224,6 +284,7 @@
   "haskell.hlint.run": "onType",
   "hindent-format.enable": true,
   "hindent-format.command": "hindent",
+  "idris.idrisPath": "idris2",
   "idris.executablePath": "idris",
   "idris.hoverMode": "fallback",
   "idris.suggestMode": "replCompletion",
@@ -240,7 +301,7 @@
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.fontSize": 15,
   // "terminal.integrated.fontFamily": "Fira Code",
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "workbench.startupEditor": "none",
   "purescript.buildCommand": "npm run build:json",
   "purescript.autocompleteAddImport": true,
@@ -269,45 +330,47 @@
       "variables": "#e06c75"
     }
   },
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
   "workbench.list.horizontalScrolling": true,
   "workbench.view.alwaysShowHeaderActions": true,
-  "workbench.colorCustomizations": {
-    "activityBar.background": "#000000",
-    "activityBar.border": "#d3d3d3",
-    "input.background": "#000000",
-    "terminal.selectionBackground": "#000000",
-    "terminal.background": "#000000",
-    "activityBarBadge.background": "#000000",
-    "sideBar.background": "#000000",
-    "sideBar.border": "#d3d3d3",
-    "editor.background": "#000000",
-    "tab.inactiveBackground": "#000000",
-    "panel.border": "#d3d3d3",
-    "peekView.border": "#d3d3d3",
-    "sideBarSectionHeader.border": "#d3d3d3",
-    "menu.selectionBorder": "#d3d3d3",
-    "titleBar.border": "#d3d3d3",
-    "menubar.selectionBorder": "#d3d3d3",
-    "terminal.border": "#d3d3d3",
-    "editorGroupHeader.tabsBorder": "#d3d3d3",
-    "editorLineNumber.foreground": "#d3d3d3",
-    "editorGroupHeader.tabsBackground": "#000000",
-    "statusBar.background": "#B48EAD",
-    "statusBar.noFolderBackground": "#B48EAD",
-    "statusBar.debuggingBackground": "#B48EAD",
-    "statusBar.foreground": "#000"
-  },
-  // "standard.enable": true,
+  // "workbench.colorCustomizations": {
+  //   "activityBar.background": "#000000",
+  //   "activityBar.border": "#d3d3d3",
+  //   "input.background": "#000000",
+  //   "terminal.selectionBackground": "#000000",
+  //   "terminal.background": "#000000",
+  //   "activityBarBadge.background": "#000000",
+  //   "sideBar.background": "#000000",
+  //   "sideBar.border": "#d3d3d3",
+  //   "editor.background": "#000000",
+  //   "tab.inactiveBackground": "#000000",
+  //   "panel.border": "#d3d3d3",
+  //   "peekView.border": "#d3d3d3",
+  //   "sideBarSectionHeader.border": "#d3d3d3",
+  //   "menu.selectionBorder": "#d3d3d3",
+  //   "titleBar.border": "#d3d3d3",
+  //   "menubar.selectionBorder": "#d3d3d3",
+  //   "terminal.border": "#d3d3d3",
+  //   "editorGroupHeader.tabsBorder": "#d3d3d3",
+  //   "editorLineNumber.foreground": "#d3d3d3",
+  //   "editorGroupHeader.tabsBackground": "#000000",
+  //   "statusBar.background": "#1ea7c9",
+  //   "statusBar.noFolderBackground": "#B48EAD",
+  //   "statusBar.debuggingBackground": "#B48EAD",
+  //   "statusBar.foreground": "#000"
+  // },
+  "standard.enable": true,
+  "workbench.list.automaticKeyboardNavigation": false,
   "eslint.enable": true,
   "eslint.packageManager": "npm",
   // "eslint.options": { "configfile": "~/Desktop/todo-vanilla-js/.eslintrc.json" },
   "git.ignoreMissingGitWarning": true,
-  "files.eol": "\r\n",
+  "files.eol": "\n",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.iconTheme": "file-icons",
-  "workbench.colorTheme": "Darker than One Dark Pro",
+  "workbench.colorTheme": "Even Darker than One Dark Pro",
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "numso.prettier-standard-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -374,7 +437,7 @@
   "peacock.affectTitleBar": true,
   "peacock.darkenLightenPercentage": 2,
   "[haskell]": {
-    "editor.defaultFormatter": "monofon.hindent-format"
+    "editor.defaultFormatter": "haskell.haskell"
   },
   "terminal.integrated.shell.osx": "/bin/zsh",
   "elm.analyseEnabled": true,
@@ -384,10 +447,31 @@
   "material-icon-theme.activeIconPack": "react",
   "explorer.openEditors.visible": 0,
   "workbench.settings.editor": "json",
-  "javascript.implicitProjectConfig.checkJs": true
+  "javascript.implicitProjectConfig.checkJs": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "brittany.enable": true,
+  "brittany.keepCRLF": false,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "tongues",
+      "database": "tongues",
+      "username": "",
+      "password": ""
+    }
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "FSharp.suggestSdkScripts": false
   //     "[html]": {
   //   }
   // "clojure.leinPath": "/usr/local/bin/lein",
   // "clojure.toolsJar": "/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/lib/tools.jar"
 }
-m
+
